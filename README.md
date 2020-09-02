@@ -1,6 +1,6 @@
 # PhoneBot
 
-Make a chatbot that talks in your voice and responds out loud.<br/>
+Make a chatbot that talks in your voice and responds out loud.<br/><br/>
 
 How to setup
 ------
@@ -13,7 +13,7 @@ python3 setup.py
 ```
 <br/>
 
-<br/>How to run
+How to run
 ------
 In terminal, run the following code:
 
