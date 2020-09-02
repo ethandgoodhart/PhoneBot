@@ -1,4 +1,7 @@
+from threading import Thread
 import speech_recognition as sr
+import time
+import sys
 
 class bcolors:
     HEADER = '\033[95m'
@@ -17,12 +20,24 @@ mic = sr.Microphone()
 
 recording_audio = {"1": "yeah yeah", "2": "yeah that sounds right", "3": "umm im not sure", "4": "hey how is it going umm whatchu up to", "5": "how is it going", "6": "yeah I have", "7": "no I have not", "8": "here let me see", "9": "here", "10": "hey im here", "11": "yeah no problem", "12": "hey how you doing", "13": "did you see the game last night it was crazy", "14": "oh my god I cant believe we lost last night", "15": "umm give me one second to check", "16": "yeah give me one second", "17": "umm I dont know", "18": "bonjour", "19": "what", "20": "I dont understand what youre saying", "21": "not much what about you", "22": "thats good", "23": "okay", "24": "Im good uh how are you", "25": "yeah", "26": "yeah no problem", "27": "yeah sure", "28": "could you repeat that", "29": "alright", "30": "sounds good", "31": "oh okay", "32": "yeah", "33": "no", "34": "no thats crazy", "35": "wow", "36": "im good how about you", "37": "good", "38": "see yah", "39": "no fuck you", "40": "umm", "41": "it was pretty easy", "42": "sorry umm its not working", "43": "oh umm im having some problems with my internet", "44": "uh not sure", "45": "yes", "46": "i dont know yet"}
 lb = "---------------------------------------------------------------------------------------------------------------------"
+mic_working = False
 
-with mic as source:
-	print('Testing the microphone... Say "Hey PhoneBot" to continue')
-	test = r.listen(source)
+def p1():
+	with mic as source:
+		test = r.listen(source)
+		print("Microphone is working properly." + "\n")
+		mic_working = True
+	
+def p2():
+	time.sleep(3)
+	if not mic_working:
+		print("Microphone is not working try setting a different input in System Preferences." + "\n")
+		sys.exit()
+	
 
-print("Microphone is working properly." + "\n")
+print('Testing the microphone... Say "Hey PhoneBot" to continue')
+Thread(target = p1).start()
+Thread(target = p2).start()
 
 for phrase in recording_audio.items():
 	print(lb + "\n" + 'Say ' + bcolors.HEADER + '"' + phrase[1] + '"' + bcolors.ENDC)
