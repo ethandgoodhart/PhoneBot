@@ -4,7 +4,8 @@ Make a chatbot that talks in your voice and responds out loud.<br/><br/>
 
 How to setup
 ------
-Open the Terminal app on your mac then paste the following code:
+1. Install BlackHole audio routing: http://existential.audio/blackhole/
+2. Open the Terminal app on your mac then paste the following code:
 
 ```
 git clone https://github.com/ethandgoodhart/PhoneBot/
