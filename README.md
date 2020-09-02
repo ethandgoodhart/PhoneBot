@@ -12,8 +12,8 @@ pip3 install SpeechRecognition==3.8.1 PyAudio
 python3 setup.py
 ```
 <br/>
-<br/>
-How to run
+
+<br/>How to run
 ------
 In terminal, run the following code:
 
