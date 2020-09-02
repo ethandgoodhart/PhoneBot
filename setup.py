@@ -38,6 +38,7 @@ def p2():
 print('Testing the microphone... Say "Hey PhoneBot" to continue')
 Thread(target = p1).start()
 Thread(target = p2).start()
+time.sleep(3)
 
 for phrase in recording_audio.items():
 	print(lb + "\n" + 'Say ' + bcolors.HEADER + '"' + phrase[1] + '"' + bcolors.ENDC)
