@@ -13,7 +13,7 @@ mkdir Recordings
 pip3 install SpeechRecognition==3.8.1 PyAudio
 python3 setup.py
 ```
-<br/><br/>
+<br/>
 
 Microphone configuration
 ------
@@ -22,7 +22,7 @@ If you want to just be able to talk to PhoneBot without it being able to hear so
 2. Go to System Preferences > Sound and click on Input; Make sure that BlackHole 16ch is selected
 3. Open up the Audio MIDI Setup app, and click on the small plus in the bottom left corner
 4. Click on Create Multi-Output Device, then make sure that Built-in Output and BlackHole 16ch are both selected
-5. Lastly, go back to System Preferences > Sound and click on Output; Select Multi-Output Device and you are ready to go!
+5. Lastly, go back to System Preferences > Sound and click on Output; Select Multi-Output Device and you are ready to go!<br/><br/>
 
 How to run
 ------
