@@ -23,22 +23,27 @@ lb = "--------------------------------------------------------------------------
 mic_working = False
 
 def p1():
+	global mic_working
+	
 	with mic as source:
 		test = r.listen(source)
 		print("Microphone is working properly." + "\n")
 		mic_working = True
 	
 def p2():
-	time.sleep(3)
+	global mic_working
+	
+	time.sleep(4)
+	
 	if not mic_working:
 		print("Microphone is not working try setting a different input in System Preferences." + "\n")
-		sys.exit()
+		raise SystemExit
 	
 
 print('Testing the microphone... Say "Hey PhoneBot" to continue')
 Thread(target = p1).start()
 Thread(target = p2).start()
-time.sleep(3)
+time.sleep(4)
 
 for phrase in recording_audio.items():
 	print(lb + "\n" + 'Say ' + bcolors.HEADER + '"' + phrase[1] + '"' + bcolors.ENDC)
