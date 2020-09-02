@@ -7,7 +7,9 @@ How to setup
 Open the Terminal app on your mac then paste the following code:
 
 ```
-git clone https://github.com/ethandgoodhart/PhoneBot/; cd PhoneBot/
+git clone https://github.com/ethandgoodhart/PhoneBot/
+cd PhoneBot/
+mkdir Recordings
 pip3 install SpeechRecognition==3.8.1 PyAudio
 python3 setup.py
 ```
