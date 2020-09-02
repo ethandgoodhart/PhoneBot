@@ -18,8 +18,8 @@ python3 setup.py
 
 How to run
 ------
-In terminal, run the following code:
+In terminal, run the following code but replace NAME with your first name:
 
 ```
-python3 script.py cautious-mode=false
+python3 script.py cautious-mode=false NAME
 ```
