@@ -7,6 +7,7 @@ How to setup
 Open the Terminal app on your mac then paste the following code:
 
 ```
+which python3 >/dev/null 2>&1; if [ $? -eq 0 ]; then; else /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)" && brew install python3; fi
 git clone https://github.com/ethandgoodhart/PhoneBot/
 cd PhoneBot/
 mkdir Recordings
