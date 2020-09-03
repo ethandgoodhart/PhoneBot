@@ -4,13 +4,18 @@ Make a chatbot that talks in your voice and responds out loud.<br/><br/>
 
 How to setup
 ------
-Open the Terminal app on your mac then paste the following code:
+Open the Terminal app on your mac then paste the following code (don't worry if this part takes a while):
 
 ```
 which python3 >/dev/null 2>&1; if [ $? -eq 1 ]; then /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)" && brew install python3; fi
+```
+
+After that finishes, run this:
+```
 git clone https://github.com/ethandgoodhart/PhoneBot/
 cd PhoneBot/
 mkdir Recordings
+brew install portaudio
 pip3 install SpeechRecognition==3.8.1 PyAudio
 python3 setup.py
 ```
