@@ -31,6 +31,8 @@ with mic as source:
 		raise SystemExit
 
 for phrase in recording_audio.items():
+	time.sleep(1)
+
 	print(lb + "\n" + 'Say ' + bcolors.HEADER + '"' + phrase[1] + '"' + bcolors.ENDC)
 
 	with mic as source:
