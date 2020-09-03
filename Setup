@@ -1,7 +1,0 @@
-echo Don't worry if you feel like this part is taking a while
-sleep 2
-which python3 >/dev/null 2>&1; if [ $? -eq 1 ]; then /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)" && brew install python3; fi
-
-mkdir Recordings
-brew install portaudio
-pip3 install SpeechRecognition==3.8.1 PyAudio
