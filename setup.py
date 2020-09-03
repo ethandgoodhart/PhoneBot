@@ -35,8 +35,14 @@ for phrase in recording_audio.items():
 
 	print(lb + "\n" + 'Say ' + bcolors.HEADER + '"' + phrase[1] + '"' + bcolors.ENDC)
 
+	if len(phrase[1]) <= 6:
+		delay = 2.5
+	else:
+		delay = len(phrase[1]) / 4
+	
+
 	with mic as source:
-	    audio = r.listen(source, 3.5, len(phrase[1]) / 4)
+	    audio = r.listen(source, 3.5, delay)
 
 	with open("Recordings/New Recording " + phrase[0] + ".flac", "wb") as file:
 	    file.write(audio.get_flac_data())
