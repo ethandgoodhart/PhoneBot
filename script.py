@@ -44,11 +44,11 @@ def process_command(c):
                 ops = value.split(" or ")
                 sel = ops[random.randint(0, len(ops) - 1)]
                 print("Response: " + recording_audio[sel] + "\n" + lb)
-                respond("Recordings/New\\ Recording\\ " + sel + ".flac")
+                respond("Recordings/New\\ Recording\\ " + sel + ".m4a")
                 break
             else:
                 print("Response: " + recording_audio[value] + "\n" + lb)
-                respond("Recordings/New\\ Recording\\ " + value + ".flac")
+                respond("Recordings/New\\ Recording\\ " + value + ".m4a")
                 break
 
     if (not found) and (cautious_mode):
@@ -57,7 +57,7 @@ def process_command(c):
             ops = value.split(" or ")
             sel = ops[random.randint(0, len(ops) - 1)]
             print("Response: " + recording_audio[sel] + "\n" + lb)
-            respond("Recordings/New\\ Recording\\ " + sel + ".flac")
+            respond("Recordings/New\\ Recording\\ " + sel + ".m4a")
         else:
             print("Being Cautious So No Response\n" + lb)
     elif (not found) and (not cautious_mode):
@@ -66,12 +66,12 @@ def process_command(c):
             ops = value.split(" or ")
             sel = ops[random.randint(0, len(ops) - 1)]
             print("Response: " + recording_audio[sel] + "\n" + lb)
-            respond("Recordings/New\\ Recording\\ " + sel + ".flac")
+            respond("Recordings/New\\ Recording\\ " + sel + ".m4a")
         else:
             resz = ["19", "19", "20", "23", "23", "23", "23", "28", "29", "29", "30", "30", "31", "31", "25", "40"]
             res = resz[random.randint(0, len(resz) - 1)]
             print("Response Not Found: " + recording_audio[res] + "\n" + lb)
-            respond("Recordings/New\\ Recording\\ " + res + ".flac")
+            respond("Recordings/New\\ Recording\\ " + res + ".m4a")
 
 def respond(file_name):
     os.system("afplay " + file_name)
