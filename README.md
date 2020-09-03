@@ -2,14 +2,16 @@
 
 Make a chatbot that talks in your voice and responds out loud.<br/><br/>
 
-How to setup
+Easy setup
 ------
 To setup PhoneBot visually follow these steps:
 1. Download, and unzip the project folder from here: https://github.com/ethandgoodhart/PhoneBot/archive/master.zip
 2. Click on the black **Setup** file and enter your password if necessary, this will install the required dependencies for PhoneBot
 3. Click on the black **RecordSamplesFile** file and record your samples
-4. Now, whenever you want to run PhoneBot, just click on the black PhoneBot file
+4. Now, whenever you want to run PhoneBot, just click on the black PhoneBot file<br/><br/>
 
+Advanced setup
+------
 To setup PhoneBot via Terminal, follow these steps:
 1. Run the following code in Terminal:
 
