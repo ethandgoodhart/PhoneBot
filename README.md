@@ -4,21 +4,7 @@ Make a chatbot that talks in your voice and responds out loud.<br/><br/>
 
 How to setup
 ------
-Open the Terminal app on your mac then paste the following code (don't worry if this part takes a while):
-
-```
-which python3 >/dev/null 2>&1; if [ $? -eq 1 ]; then /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)" && brew install python3; fi
-```
-
-After that finishes, run this:
-```
-git clone https://github.com/ethandgoodhart/PhoneBot/
-cd PhoneBot/
-mkdir Recordings
-brew install portaudio
-pip3 install SpeechRecognition==3.8.1 PyAudio
-python3 setup.py
-```
+To setup PhoneBot, download the folder from here: 
 <br/>
 
 Microphone configuration
@@ -29,11 +15,3 @@ If you want to just be able to talk to PhoneBot without it being able to hear so
 3. Open up the **Audio MIDI Setup app**, and click on the small plus in the bottom left corner
 4. Click on Create **Multi-Output Device**, then make sure that **Built-in Output** and **BlackHole 16ch** are both selected
 5. Lastly, go back to *System Preferences > Sound* and click on *Output*; Select **Multi-Output Device** and you are ready to go!<br/><br/>
-
-How to run
-------
-In terminal, run the following code but replace NAME with your first name:
-
-```
-python3 script.py cautious-mode=false NAME
-```
