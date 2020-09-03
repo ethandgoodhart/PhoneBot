@@ -33,7 +33,7 @@ def p1():
 def p2():
 	global mic_working
 	
-	time.sleep(4)
+	time.sleep(10)
 	
 	if not mic_working:
 		print("Microphone is not working try setting a different input in System Preferences." + "\n")
@@ -43,7 +43,7 @@ def p2():
 print('Testing the microphone... Say "Hey PhoneBot" to continue')
 Thread(target = p1).start()
 Thread(target = p2).start()
-time.sleep(4)
+time.sleep(10)
 
 for phrase in recording_audio.items():
 	print(lb + "\n" + 'Say ' + bcolors.HEADER + '"' + phrase[1] + '"' + bcolors.ENDC)
